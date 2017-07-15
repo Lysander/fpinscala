@@ -1,3 +1,4 @@
+import chapter2.MyModul
 import chapter2.MyModul.formatResult
 import chapter2.MyModul.fib
 import chapter2.MyModul.isSorted
@@ -18,5 +19,9 @@ f(1, 2)
 val curried = curry[Int, Int, Int](f)
 val threePlus = curried(3)
 threePlus(10)
-threePlus(1)
+//threePlus(1)
 
+val add = MyModul.uncurry[Int, Int, Int](curried)
+add(1, 2)
+
+MyModul.compose((b: Int)=> b * 2, (a: Int) => a + 1)(1)
