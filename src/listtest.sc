@@ -32,4 +32,7 @@ List.length(ex3)
 List.length(ex1)
 
 // Exercise 3.9
-List.length(List(1 to 100000000: _*))
+//List.length(List(1 to 9999: _*))
+
+List.sum3(ex5)
+List.length3(ex5)

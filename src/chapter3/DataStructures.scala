@@ -80,4 +80,22 @@ object List {
   Exercise 3.9
    */
   def length[A](as: List[A]): Int = foldRight(as, 0)((_, y) => 1 + y)
+
+  /*
+  Exercise 3.10
+   */
+  @annotation.tailrec
+  def foldLeft[A, B](as: List[A], z: B)(f: (B, A) => B): B = as match {
+    case Nil => z
+    case Cons(h, t) => foldLeft(t, f(z, h))(f)
+  }
+
+  /*
+  Exercise 3.11
+   */
+  def sum3(ns: List[Int]): Int = foldLeft(ns, 0)(_ + _)
+
+  def product3(ns: List[Double]): Double = foldLeft(ns, 1.0)(_ * _)
+
+  def length3[A](as: List[A]): Int = foldLeft(as, 0)((acc, _) => acc + 1)
 }
