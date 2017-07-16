@@ -36,3 +36,5 @@ List.length(ex1)
 
 List.sum3(ex5)
 List.length3(ex5)
+
+List.reverse(ex5)
