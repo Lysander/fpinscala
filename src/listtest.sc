@@ -21,3 +21,15 @@ List.drop(ex5, 6)
 
 List.dropWhile(ex5, (x: Int) => x < 3)
 
+List.init(ex5)
+List.init(Nil)
+List.init(ex2)
+
+List.sum2(ex5)
+
+List.length(ex5)
+List.length(ex3)
+List.length(ex1)
+
+// Exercise 3.9
+List.length(List(1 to 100000000: _*))
